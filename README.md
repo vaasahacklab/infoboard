@@ -2,7 +2,7 @@
 Scripts and instructions for making infoboard from Raspberry pi
 
 ## What is it?
-Infoboard makes Raspberry Pi to show pictures on attached display on HDMI-port and uploading of new pictures makes them to show up automatically, so all that is needed is to put new pictures in place or remove old ones. Majority of instructions should work on any Systemd based OS, but this is made specifically for Raspberry Pi with Debian Jessie.
+Infoboard makes Raspberry Pi to show pictures on attached display on HDMI-port *using framebuffer* and **without needing X**, so infoboard is very lightweight. Uploading new pictures makes them to show up automatically, so all that is needed is to upload new pictures into place and/or remove old ones and they will show up on display. Majority of instructions should work on any Systemd based OS, but these is made specifically for Raspberry Pi with Debian Jessie in mind.
 
 ## Daily usage
 Just copy wanted imagefile(s) (png and jpg preferred) into device with SFTP:
@@ -133,7 +133,7 @@ then ssh with new user:
 ssh hacklab@<IP-address>
 ```
 
-then run:
+then run to disable root login:
 
 ```
 sudo passwd -l root
