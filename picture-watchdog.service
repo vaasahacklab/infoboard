@@ -1,0 +1,11 @@
+[Unit]
+Description=Picture folder watchdog
+After=getty@tty1.service
+
+[Service]
+Type=simple
+ExecStart=/root/picture-watchdog.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
